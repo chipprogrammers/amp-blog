@@ -1,5 +1,5 @@
-<header class="ampstart-headerbar fixed flex justify-start items-center top-0 left-0 right-0 pl2 pr4 ">
-    <div role="button" aria-label="open sidebar" on="tap:header-sidebar.toggle" tabindex="0" class="ampstart-navbar-trigger  pr2"><amp-img src="{{ site.baseurl }}/svg/menu.svg" height="32px" width="32px" alt="menu"></amp-img>
-    </div>
-        <div class="ampstart-headerbar-title mx-auto h3">{{ site.title }}</div>
-  </header>
+<header class="w3-container w3-top w3-{{ page.color | default: 'deep-orange' }} w3-xlarge w3-padding-16">
+  <span class="w3-left w3-padding w3-hide-small"><img src="{{ site.baseurl }}{{ site.logo }}" height="32" width="32" alt="logo"> {{ site.Title }}</span>
+  {% if site.short_title %}<span class="w3-left w3-padding w3-hide-medium w3-hide-large"><amp-img src="{{ site.baseurl }}{{ site.logo }}" height="24" width="24" alt="logo"></amp-img> {{ site.short_title }}</span>{% endif %}
+  <a href="javascript:void(0)" class="w3-{{ page.color | default: 'deep-orange' }} w3-right w3-button" onclick="w3_open()"><i class="fas fa-bars" style="font-size:24px;"></i></a>
+</header>
